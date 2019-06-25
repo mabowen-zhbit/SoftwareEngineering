@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.User" table="user">
+        <!--建立类的属性哪一个是主键  还要跟数据库中主键对应 name为java，colum为数据库-->
+        <id name="user_id" column="user_id">
+            <!--主键的生成策略-->
+            <generator class="native"/>
+        </id>
+
+        <!--建立类中的普通属性与数据库进行关联，如果俩个一样，colum可以不写-->
+        <property name="user_name" column="user_name"></property>
+
+
+
+
+
+    </class>
+</hibernate-mapping>
